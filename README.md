@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const skills = {
+const skills = {                 
   technical: [
     { name: "Java", icon: "☕" },
     { name: "Python", icon: "🐍" },
