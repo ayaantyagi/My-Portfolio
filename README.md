@@ -1,118 +1,118 @@
-import React, { useEffect, useRef, useState } from "react";
-
-const skills = {                 
-  technical: [
-    { name: "Java", icon: "☕" },
-    { name: "Python", icon: "🐍" },
-    { name: "JavaScript", icon: "🟨" },
-    { name: "TypeScript", icon: "🔷" },
-    { name: "React.js", icon: "⚛️" },
-    { name: "HTML5", icon: "📄" },
-    { name: "CSS3", icon: "🎨" },
-    { name: "Bootstrap", icon: "🅱️" },
-    { name: "Django", icon: "🌿" },
-    { name: "Node.js", icon: "🟩" },
-    { name: "Express.js", icon: "🚂" },
-    { name: "SQL", icon: "🗄️" },
-    { name: "MySQL", icon: "🐬" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Git", icon: "🔧" },
-    { name: "GitHub", icon: "🐙" },
-    { name: "Postman", icon: "📬" },
-    { name: "VS Code", icon: "🖥️" },
-    { name: "AWS (basics)", icon: "☁️" },
-    { name: "Docker (basics)", icon: "🐳" },
-  ],
-  soft: [
-    "Problem Solving",
-    "Communication",
-    "Adaptability",
-    "Team Leadership",
-  ],
-};
-
-const projects = [
-  {
-    title: "Smart Health Monitoring System 🩺",
-    description:
-      "Django-based app for real-time health & mental health monitoring with dashboards and SQL database.",
-    github: "https://github.com/ayaantyagi/Smart-Health-Monitoring-System-",
-  },
-  {
-    title: "Multi-language Online Bookstore Management System 📚",
-    description:
-      "Full-stack system built with Java (backend), SQL (database), and Python (data handling). Features: inventory management, user login, payment gateway integration, multilingual support for a global user base.",
-    github:
-      "https://github.com/ayaantyagi/Multi-language-Online-Bookstore-Management-System-",
-  },
-  {
-    title: "Mental Health App 💙",
-    description:
-      "A web application focused on promoting mental health awareness and providing resources. Developed with Django (backend), Python, and SQL. Includes user authentication, interactive features, and support tools.",
-    github: "https://github.com/ayaantyagi/mental-health-app",
-  },
-];
-
-const socialLinks = {
-  linkedin: "https://linkedin.com/in/ayaantyagi",
-  github: "https://github.com/ayaantyagi",
-  email: "mailto:ayan.tyagi2211@gmail.com",
-};
-
-// Hook for fade-in on scroll
-function useFadeInOnScroll() {
-  const ref = useRef();
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(ref.current);
-        }
-      },
-      { threshold: 0.2 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  return [ref, visible];
-}
-
-const App = () => {
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const [aboutRef, aboutVisible] = useFadeInOnScroll();
-  const [skillsRef, skillsVisible] = useFadeInOnScroll();
-  const [projectsRef, projectsVisible] = useFadeInOnScroll();
-  const [experienceRef, experienceVisible] = useFadeInOnScroll();
-  const [educationRef, educationVisible] = useFadeInOnScroll();
-  const [contactRef, contactVisible] = useFadeInOnScroll();
-
-  return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
-        * { box-sizing: border-box; }
-        body {
-          margin: 0;
-          font-family: 'Poppins', sans-serif;
-          background: #0f0f23;
-          color: #e0e0e0;
-          scroll-behavior: smooth;
-        }
-        a { color: #00fff7; text-decoration: none; }
-        a:hover, a:focus { text-decoration: underline; outline: none; }
-        button {
-          cursor: pointer;
-          border: none;
-          border-radius: 40px;
-          padding: 14px 36px;
+import React, { useEffect, useRef, useState } from "react";                 
+                        
+const skills = {                                            
+  technical: [        
+    { name: "Java", icon: "☕" },                
+    { name: "Python", icon: "🐍" },                   
+    { name: "JavaScript", icon: "🟨" },                    
+    { name: "TypeScript", icon: "🔷" },                
+    { name: "React.js", icon: "⚛️" },           
+    { name: "HTML5", icon: "📄" },               
+    { name: "CSS3", icon: "🎨" },              
+    { name: "Bootstrap", icon: "🅱️" },          
+    { name: "Django", icon: "🌿" },                   
+    { name: "Node.js", icon: "🟩" },             
+    { name: "Express.js", icon: "🚂" },                
+    { name: "SQL", icon: "🗄️" },                  
+    { name: "MySQL", icon: "🐬" },  
+    { name: "MongoDB", icon: "🍃" },             
+    { name: "Git", icon: "🔧" },                
+    { name: "GitHub", icon: "🐙" },               
+    { name: "Postman", icon: "📬" },             
+    { name: "VS Code", icon: "🖥️" },              
+    { name: "AWS (basics)", icon: "☁️" },                 
+    { name: "Docker (basics)", icon: "🐳" },                      
+  ],                   
+  soft: [             
+    "Problem Solving", 
+    "Communication",          
+    "Adaptability",               
+    "Team Leadership",                    
+  ],             
+};                      
+                        
+const projects = [                    
+  {              
+    title: "Smart Health Monitoring System 🩺",                 
+    description:                
+      "Django-based app for real-time health & mental health monitoring with dashboards and SQL database.",                    
+    github: "https://github.com/ayaantyagi/Smart-Health-Monitoring-System-",                        
+  },               
+  {                
+    title: "Multi-language Online Bookstore Management System 📚",              
+    description:                           
+      "Full-stack system built with Java (backend), SQL (database), and Python (data handling). Features: inventory management, user login, payment gateway integration, multilingual support for a global user base.",             
+    github:                   
+      "https://github.com/ayaantyagi/Multi-language-Online-Bookstore-Management-System-",            
+  },              
+  {                     
+    title: "Mental Health App 💙",           
+    description:              
+      "A web application focused on promoting mental health awareness and providing resources. Developed with Django (backend), Python, and SQL. Includes user authentication, interactive features, and support tools.",         
+    github: "https://github.com/ayaantyagi/mental-health-app",             
+  },             
+];                      
+                       
+const socialLinks = {                              
+  linkedin: "https://linkedin.com/in/ayaantyagi",                     
+  github: "https://github.com/ayaantyagi",                     
+  email: "mailto:ayan.tyagi2211@gmail.com",                       
+};                          
+                                  
+// Hook for fade-in on scroll                   
+function useFadeInOnScroll() {                             
+  const ref = useRef();                            
+  const [visible, setVisible] = useState(false);                  
+                    
+  useEffect(() => {                     
+    const observer = new IntersectionObserver(              
+      ([entry]) => {                     
+        if (entry.isIntersecting) {                       
+          setVisible(true);                        
+          observer.unobserve(ref.current);                  
+        }                   
+      },                    
+      { threshold: 0.2 }                     
+    );                                                
+    if (ref.current) observer.observe(ref.current);             
+    return () => observer.disconnect();                 
+  }, []);               
+                            
+  return [ref, visible];                
+}                
+                     
+const App = () => {                   
+  const scrollToSection = (id) => {               
+    const el = document.getElementById(id);                  
+    if (el) el.scrollIntoView({ behavior: "smooth" });              
+  };                   
+                                                           
+  const [aboutRef, aboutVisible] = useFadeInOnScroll();           
+  const [skillsRef, skillsVisible] = useFadeInOnScroll();             
+  const [projectsRef, projectsVisible] = useFadeInOnScroll();                
+  const [experienceRef, experienceVisible] = useFadeInOnScroll();            
+  const [educationRef, educationVisible] = useFadeInOnScroll();                
+  const [contactRef, contactVisible] = useFadeInOnScroll();                
+                             
+  return (                      
+    <>               
+      <style>{`                                                                                          
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');           
+        * { box-sizing: border-box; }                
+        body {              
+          margin: 0;                            
+          font-family: 'Poppins', sans-serif;                   
+          background: #0f0f23;                     
+          color: #e0e0e0;                    
+          scroll-behavior: smooth;                     
+        }                                               
+        a { color: #00fff7; text-decoration: none; }                        
+        a:hover, a:focus { text-decoration: underline; outline: none; }              
+        button {                    
+          cursor: pointer;                 
+          border: none;                  
+          border-radius: 40px;                   
+          padding: 14px 36px;                                   
           font-weight: 600;
           font-size: 1.1rem;
           color: #0f0f23;
