@@ -438,9 +438,9 @@ const App = () => {
             max-width: 280px;
           }
         }
-      `}</style>
-
-      <nav aria-label="Primary Navigation">
+      `}</style>    
+ 
+      <nav aria-label="Primary Navigation"> 
         <ul>
           <li tabIndex="0" onClick={() => scrollToSection("hero")}>Home</li>
           <li tabIndex="0" onClick={() => scrollToSection("about")}>About</li>
