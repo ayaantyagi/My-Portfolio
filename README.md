@@ -482,7 +482,7 @@ const App = () => {
         />
         <div className="text">
           <h2>About Me</h2>
-          <p>
+          <p>     
             I am a Computer Science graduate from SRM Institute of Science and Technology, Delhi-NCR Campus.
             Passionate about full-stack development, I create modern and impactful web solutions using Java, Python, React, Django, and SQL.
             Apart from coding, I’m a basketball 🏀 & badminton 🏸 enthusiast, bringing teamwork, discipline, and persistence into my professional journey.
