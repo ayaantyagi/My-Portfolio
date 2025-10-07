@@ -85,7 +85,7 @@ const App = () => {
   const scrollToSection = (id) => {               
     const el = document.getElementById(id);                  
     if (el) el.scrollIntoView({ behavior: "smooth" });              
-  };                   
+  };                    
                                                            
   const [aboutRef, aboutVisible] = useFadeInOnScroll();           
   const [skillsRef, skillsVisible] = useFadeInOnScroll();             
